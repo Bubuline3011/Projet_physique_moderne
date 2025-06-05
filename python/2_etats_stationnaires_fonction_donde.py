@@ -50,7 +50,7 @@ for i, xi in enumerate(x):
 
 # Tracé
 plt.figure(figsize=(10, 6))
-plt.plot(x, phi_real, label=f"Re[φ(x)] pour E = {E}", color="blue")
+plt.plot(x, phi_real, label=f"Re[φ(x)] pour E = {E/eV:.1f} eV", color="blue")
 
 # Puits de potentiel (mis à l’échelle pour la visibilité)
 plt.plot(x, V_x / V0, label='Puits de potentiel (échelle réduite)', color='red', linestyle='--')
