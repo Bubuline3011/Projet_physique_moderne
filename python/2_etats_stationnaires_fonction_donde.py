@@ -11,7 +11,7 @@ V0 = 10 * eV      # profondeur du puits en joules
 a = 1e-10         # demi-largeur du puits en mètres (1 Å)
 
 # Énergie choisie
-E = 20 * eV        # énergie de la particule en joules
+E = 50 * eV        # énergie de la particule en joules
 
 # Constantes d'onde
 k = np.sqrt(2 * m * E) / hbar
@@ -31,7 +31,7 @@ A3 = terme * A2 * np.exp(1j * q * a - 1j * k * a)
 B1 = A1 - A2 * np.exp(-2j * k * a) - B2 * np.exp(-2j * k * a)
 
 # Grille spatiale
-x = np.linspace(-3*a, 3*a, 1000)
+x = np.linspace(-5*a, 5*a, 2000)  # plus large + plus de points pour lisser
 phi_real = np.zeros_like(x, dtype=np.float64)
 V_x = np.zeros_like(x)
 
